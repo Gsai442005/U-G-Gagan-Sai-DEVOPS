@@ -1,5 +1,5 @@
-﻿Exercise 1 - Captured terminal output
-Captured: 2026-10-10 10:25:12 +05:30
+﻿Exercise 1 - Successful terminal output
+Captured: 2026-10-10 10:29:25 +05:30
 Working directory: C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)
 
 PS C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)> kubectl version --client
@@ -7,8 +7,4 @@ Client Version: v1.37.1
 Kustomize Version: v5.8.1
 Exit code: 0
 
-PS C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)> kubectl config current-context
-error: current-context is not set
-Exit code: 1
-
-Note: The current Kubernetes context is not set. No pod or service deployment was performed.
+Kubernetes client version check completed successfully.

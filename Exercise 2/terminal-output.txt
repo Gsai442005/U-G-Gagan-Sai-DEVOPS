@@ -1,12 +1,12 @@
-﻿Exercise 2 - Captured terminal output
-Captured: 2026-10-10 10:25:46 +05:30
+﻿Exercise 2 - Successful local terminal output
+Captured: 2026-10-10 10:29:25 +05:30
 Working directory: C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)
 
 PS C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)> & ".venv\Scripts\python.exe" -m unittest discover -s "U-G-Gagan-Sai-DEVOPS\Exercise 2" -v
 test_home_returns_expected_message (test_app.FlaskAppTests.test_home_returns_expected_message) ... ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.017s
+Ran 1 test in 0.025s
 
 OK
 Exit code: 0
@@ -14,7 +14,7 @@ Exit code: 0
 PS C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)> curl.exe --silent --show-error --include http://127.0.0.1:15000
 HTTP/1.1 200 OK
 Server: Werkzeug/3.1.9 Python/3.12.10
-Date: Sat, 10 Oct 2026 04:55:46 GMT
+Date: Sat, 10 Oct 2026 04:59:26 GMT
 Content-Type: text/html; charset=utf-8
 Content-Length: 31
 Connection: close
@@ -22,3 +22,4 @@ Connection: close
 Hello from Flask on Kubernetes!
 Exit code: 0
 
+Local Flask test and HTTP check completed successfully.
