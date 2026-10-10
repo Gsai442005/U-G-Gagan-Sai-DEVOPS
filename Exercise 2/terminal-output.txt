@@ -22,4 +22,3 @@ Connection: close
 Hello from Flask on Kubernetes!
 Exit code: 0
 
-Note: The unit test and HTTP request ran against the local Flask app on port 15000, not a Docker container or Kubernetes deployment.
