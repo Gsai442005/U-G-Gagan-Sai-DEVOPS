@@ -6,9 +6,9 @@ This repository contains the first three DevOps lab exercises, each in its own n
 
 | Folder | Topic | Evidence |
 | --- | --- | --- |
-| [Exercise 1](./Exercise%201/) | Kubernetes Nginx pod and NodePort service | [kubectl client check](./Exercise%201/screenshots/kubectl-client-version.png); [cluster context unavailable](./Exercise%201/screenshots/cluster-unavailable.png) |
-| [Exercise 2](./Exercise%202/) | Flask application for Minikube | [live local HTTP check](./Exercise%202/screenshots/flask-live-http.png); Kubernetes deployment not verified |
-| [Exercise 3](./Exercise%203/) | Flask flash-sale API and Kubernetes ReplicaSet | [live local API requests](./Exercise%203/screenshots/flashsale-live-http.png); replicas and scaling not verified |
+| [Exercise 1](./Exercise%201/) | Kubernetes Nginx pod and NodePort service | [terminal output](./Exercise%201/terminal-output.txt); [screenshots](./Exercise%201/screenshots/); Kubernetes deployment not verified |
+| [Exercise 2](./Exercise%202/) | Flask application for Minikube | [terminal output](./Exercise%202/terminal-output.txt); [screenshots](./Exercise%202/screenshots/); Kubernetes deployment not verified |
+| [Exercise 3](./Exercise%203/) | Flask flash-sale API and Kubernetes ReplicaSet | [terminal output](./Exercise%203/terminal-output.txt); [screenshots](./Exercise%203/screenshots/); ReplicaSet scaling not verified |
 
 ## Running the local Flask checks
 
@@ -30,4 +30,4 @@ To deploy the manifests, first start and configure a working Minikube cluster an
 
 ## Screenshot evidence
 
-Each exercise folder contains genuine PowerShell terminal captures of commands actually run on the capture machine. The timestamp in each capture uses the machine's current time and timezone. The Flask screenshots show local app/tests, not a Docker or Minikube deployment. This Windows host currently has no working Kubernetes context or Docker runtime; the installed Minikube binary cannot run on this OS, firmware virtualization is disabled, and administrator privileges are unavailable. Therefore, successful pod, Deployment, NodePort, or ReplicaSet output cannot truthfully be produced here yet. Follow each exercise README to run those steps after configuring a supported local cluster.
+Each exercise folder contains screenshots and a `terminal-output.txt` record of commands actually run on the capture machine, with the capture time and observed command results. The Flask outputs show local app/tests, not a Docker or Minikube deployment. This Windows host currently has no working Kubernetes context or Docker runtime; the installed Minikube binary cannot run on this OS, firmware virtualization is disabled, and administrator privileges are unavailable. Therefore, successful pod, Deployment, NodePort, or ReplicaSet output cannot truthfully be produced here yet. Follow each exercise README to run those steps after configuring a supported local cluster.

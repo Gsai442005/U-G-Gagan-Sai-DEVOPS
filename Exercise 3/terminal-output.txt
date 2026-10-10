@@ -1,0 +1,49 @@
+﻿Exercise 3 - Captured terminal output
+Captured: 2026-10-10 10:25:46 +05:30
+Working directory: C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)
+
+PS C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)> & ".venv\Scripts\python.exe" -m unittest discover -s "U-G-Gagan-Sai-DEVOPS\Exercise 3" -v
+test_buy_returns_success_for_requested_user (test_app.FlashSaleApiTests.test_buy_returns_success_for_requested_user) ... ok
+test_health_reports_healthy (test_app.FlashSaleApiTests.test_health_reports_healthy) ... ok
+test_home_returns_sale_message (test_app.FlashSaleApiTests.test_home_returns_sale_message) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.013s
+
+OK
+Exit code: 0
+
+PS C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)> curl.exe --silent --show-error --include http://127.0.0.1:5000/
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.12.10
+Date: Sat, 10 Oct 2026 04:55:47 GMT
+Content-Type: application/json
+Content-Length: 83
+Connection: close
+
+{"message":"Welcome to Big Sale!","pod":"LAPTOP-2QQ5BCUR","ts":1791608147.2614574}
+Exit code: 0
+
+PS C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)> curl.exe --silent --show-error --include http://127.0.0.1:5000/health
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.12.10
+Date: Sat, 10 Oct 2026 04:55:47 GMT
+Content-Type: application/json
+Content-Length: 45
+Connection: close
+
+{"pod":"LAPTOP-2QQ5BCUR","status":"healthy"}
+Exit code: 0
+
+PS C:\Users\Gagan Sai U G\OneDrive\Documents\U.G. Gagan Sai(DEVOPS)> curl.exe --silent --show-error --include "http://127.0.0.1:5000/buy?user=student"
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.12.10
+Date: Sat, 10 Oct 2026 04:55:47 GMT
+Content-Type: application/json
+Content-Length: 110
+Connection: close
+
+{"item":"Smartphone","served_by_pod":"LAPTOP-2QQ5BCUR","status":"success","time":"10:25:47","user":"student"}
+Exit code: 0
+
+Note: The unit tests and HTTP requests ran against the local Flask app on port 5000, not a Docker container, ReplicaSet, or Kubernetes deployment.

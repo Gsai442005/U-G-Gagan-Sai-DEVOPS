@@ -24,6 +24,6 @@ minikube service hello-k8s
 
 Expected result: `kubectl get pods` shows `hello-k8s` as `Running`, and the service URL displays the Nginx welcome page.
 
-Actual result in this environment: `kubectl` client v1.37.1 is available, but the current Kubernetes context is not set, so the pod and service deployment is `NOT VERIFIED`. See [screenshots/kubectl-client-version.png](./screenshots/kubectl-client-version.png) for the client version and [screenshots/cluster-unavailable.png](./screenshots/cluster-unavailable.png) for the current-context check. Neither capture shows a running pod.
+Actual result in this environment: `kubectl` client v1.37.1 is available, but the current Kubernetes context is not set, so the pod and service deployment is `NOT VERIFIED`. See [terminal-output.txt](./terminal-output.txt) for the actual command output, [screenshots/kubectl-client-version.png](./screenshots/kubectl-client-version.png) for the client version, and [screenshots/cluster-unavailable.png](./screenshots/cluster-unavailable.png) for the current-context check. Neither screenshot shows a running pod.
 
 The manual's full success output requires a working Minikube cluster. Minikube cannot run on this host: its installed executable is not valid for Windows, Docker is unavailable, firmware virtualization is disabled, and this session has no administrator privileges to enable or install the required runtime. Do not treat the client-version check as a deployment result.
