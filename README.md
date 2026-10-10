@@ -1,14 +1,14 @@
 # DevOps Exercises
 
-This repository contains the first three DevOps lab exercises, each in its own numbered folder.
+This repository contains the first three DevOps lab exercises, each in its own numbered folder. The Kubernetes manifests and commands follow the corresponding topics in [SunagP/DevOps-Lab](https://github.com/SunagP/DevOps-Lab/tree/main/Exercises).
 
 ## Exercises
 
 | Folder | Topic | Evidence |
 | --- | --- | --- |
-| [Exercise 1](./Exercise%201/) | Kubernetes Nginx pod and NodePort service | `kubectl` client check; cluster deployment unavailable on the capture machine |
-| [Exercise 2](./Exercise%202/) | Flask application for Minikube | Local Flask endpoint returned HTTP 200; Kubernetes deployment not verified |
-| [Exercise 3](./Exercise%203/) | Flask flash-sale API and Kubernetes ReplicaSet | Local API endpoints returned HTTP 200; replicas and scaling not verified |
+| [Exercise 1](./Exercise%201/) | Kubernetes Nginx pod and NodePort service | [kubectl client check](./Exercise%201/screenshots/kubectl-client-version.png); [cluster context unavailable](./Exercise%201/screenshots/cluster-unavailable.png) |
+| [Exercise 2](./Exercise%202/) | Flask application for Minikube | [live local HTTP check](./Exercise%202/screenshots/flask-live-http.png); Kubernetes deployment not verified |
+| [Exercise 3](./Exercise%203/) | Flask flash-sale API and Kubernetes ReplicaSet | [live local API requests](./Exercise%203/screenshots/flashsale-live-http.png); replicas and scaling not verified |
 
 ## Running the local Flask checks
 
@@ -30,4 +30,4 @@ To deploy the manifests, first start and configure a working Minikube cluster an
 
 ## Screenshot evidence
 
-Each exercise folder contains genuine PowerShell terminal captures of commands actually run on the capture machine. The timestamp in each capture uses the machine's current time and timezone. A local endpoint check or Kubernetes client-version check is not presented as proof of a cluster deployment.
+Each exercise folder contains genuine PowerShell terminal captures of commands actually run on the capture machine. The timestamp in each capture uses the machine's current time and timezone. The Flask screenshots show local app/tests, not a Docker or Minikube deployment. This Windows host currently has no working Kubernetes context or Docker runtime; the installed Minikube binary cannot run on this OS, firmware virtualization is disabled, and administrator privileges are unavailable. Therefore, successful pod, Deployment, NodePort, or ReplicaSet output cannot truthfully be produced here yet. Follow each exercise README to run those steps after configuring a supported local cluster.
